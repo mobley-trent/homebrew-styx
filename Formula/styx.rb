@@ -5,21 +5,21 @@
 class Styx < Formula
   desc "Terminal agent harness for coding plus security work, with harness-enforced dual-mode safety"
   homepage "https://github.com/mobley-trent/styx-agent"
-  version "0.2.1"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mobley-trent/styx-agent/releases/download/v0.2.1/styx_0.2.1_darwin_amd64.tar.gz"
-      sha256 "a30bdd76cf55001f3dc546c78062206279faa69b59077d7ee6343c0145a22475"
+      url "https://github.com/mobley-trent/styx-agent/releases/download/v0.3.0/styx_0.3.0_darwin_amd64.tar.gz"
+      sha256 "33c3117846284d294cb663e99348dbc36ab9919ae95df06d0c8ab48258cf7b8b"
 
       define_method(:install) do
         bin.install "styx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mobley-trent/styx-agent/releases/download/v0.2.1/styx_0.2.1_darwin_arm64.tar.gz"
-      sha256 "7c5bb5a90f0c10725b0518a664f242c2ae1bb0ee2e6e9c1afff07c002e18e8aa"
+      url "https://github.com/mobley-trent/styx-agent/releases/download/v0.3.0/styx_0.3.0_darwin_arm64.tar.gz"
+      sha256 "340011f2da0a03345ef3a063155f359d5435aa6fa6c8e376d5c480ea5545811c"
 
       define_method(:install) do
         bin.install "styx"
@@ -29,15 +29,15 @@ class Styx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mobley-trent/styx-agent/releases/download/v0.2.1/styx_0.2.1_linux_amd64.tar.gz"
-      sha256 "60176f2af67b885606ae1190a5d332d9ff96d2b871556df3fd9c58558088ce9f"
+      url "https://github.com/mobley-trent/styx-agent/releases/download/v0.3.0/styx_0.3.0_linux_amd64.tar.gz"
+      sha256 "cec68eb220cdb718bd6b4650ced8909ddc45b3767da27a2691efd6172c93467d"
       define_method(:install) do
         bin.install "styx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mobley-trent/styx-agent/releases/download/v0.2.1/styx_0.2.1_linux_arm64.tar.gz"
-      sha256 "834b5db39b2624e2c2c199bebb0815039ca27f05c0cdf8c32a61e050befba3e5"
+      url "https://github.com/mobley-trent/styx-agent/releases/download/v0.3.0/styx_0.3.0_linux_arm64.tar.gz"
+      sha256 "eafcdc184c855553f1b741b06390394197876eeb361e8d0c890ef7a17c01146a"
       define_method(:install) do
         bin.install "styx"
       end
